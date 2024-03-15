@@ -1,7 +1,7 @@
 # Write your code here
 
 def is_prime(n):
-    for k in range(0, n):
+    for k in range(2, n):
         if n % k == 0:
             return False
-    return True
+    return n > 1

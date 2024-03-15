@@ -1,19 +1,14 @@
-# Write your code here
-
 def last_digit(n):
-    n = list(str(n))
-    return int(n.pop())
+    return n % 10
+
 
 def remove_last_digit(n):
-    n = list(str(n))
-    n.pop()
-    return int("".join(n))
+    return n // 10
+
 
 def digit_sum(n):
-    x = 0
-    for k in range(len(str(n))):
-        x += last_digit(n)
+    result = 0
+    while n > 0:
+        result += last_digit(n)
         n = remove_last_digit(n)
-    return x
-
-print(digit_sum(123))
+    return result
